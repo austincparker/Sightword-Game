@@ -1,0 +1,93 @@
+{
+    "users": {
+        "1234asdf" : {
+            "firebaseKey": "1234asdf",
+            "full_name": "Austin Parker",
+            "admin": true
+        },
+        "5678asdf" : {
+            "firebaseKey": "5678asdf",
+            "full_name": "Ralph Tato",
+            "admin": false
+        }
+    },
+    "lists": {
+        "9876fdsa" : {
+            "firebaseKey": "9876fdsa",
+            "name": "Kindergarten",
+            "grade": "K"
+        },
+        "5432fdsa" : {
+            "firebaseKey": "5432fdsa",
+            "name": "First Grade"
+        }
+    },
+    "sightwords": {
+        "6478boya": {
+            "firebaseKey": "6478boya",
+            "name": "boy",
+            "isStruggle": false,
+            "level": 1
+        },
+        "4578dogb": {
+            "firebaseKey": "4578dogb",
+            "name": "dog",
+            "isStruggle": true,
+            "level": 2
+        },
+        "9811girlc": {
+            "firebaseKey": "9811girlc",
+            "name": "girl",
+            "isStruggle": false,
+            "level": 3
+        }
+    },
+    "badges": {
+        "1111aaaa": {
+            "firebaseKey": "1111aaaa",
+            "name": "Kindergarten Badge",
+            "level": 1
+        },
+        "2222bbbb": {
+            "firebaseKey": "2222bbbb",
+            "name": "First Grade Badge",
+            "level": 2
+        },
+        "3333cccc": {
+            "firebaseKey": "3333cccc",
+            "name": "Second Grade Badge",
+            "level": 3
+        }
+
+        
+    },
+    "list_sightword": {
+        "4321poiu": {
+            "firebaseKey": "4321poiu",
+            "list_id": "9876fdsa",
+            "sightword_id": "6478boya"
+        },
+        "8765poyu": {
+            "firebaseKey": "8765poyu",
+            "list_id": "5432fdsa",
+            "sightword_id": "4578dogb"
+        },
+        "6578royi": {
+            "firebaseKey": "6578royi",
+            "list_id": "5432fdsa",
+            "sightword_id": "9811girlc"
+        }
+    },
+    "user_badges": {
+        "0912aust": {
+            "firebaseKey": "0912aust",
+            "user_id": "1234asdf",
+            "badge_id": "1111aaaa"
+        },
+        "0234ralp": {
+            "firebaseKey": "0234ralp",
+            "user_id": "5678asdf",
+            "badge_id": "3333cccc"
+        }
+    }
+}
