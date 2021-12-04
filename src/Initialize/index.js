@@ -30,7 +30,7 @@ function Initialize() {
         });
       } else if (user || user === null) {
         setUser(false);
-        setAdmin(false);
+        setAdmin(null);
       }
     });
   }, []);
