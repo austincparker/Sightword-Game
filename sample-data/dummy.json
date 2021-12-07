@@ -20,7 +20,8 @@
             "word_2": "cow",
             "word_3": "bird",
             "word_4": "cat",
-            "word_5": "fish"
+            "word_5": "fish",
+            "word_6": "frog"
         },
         "5432fdsa" : {
             "firebaseKey": "5432fdsa",
@@ -30,7 +31,8 @@
             "word_2": "tiger",
             "word_3": "eagle",
             "word_4": "snake",
-            "word_5": "blowfish"
+            "word_5": "blowfish",
+            "word_6": "bison"
         }
     },
     "badges": {

@@ -11,6 +11,7 @@ export default function ListCard({ list }) {
       <p>{list.word_3}</p>
       <p>{list.word_4}</p>
       <p>{list.word_5}</p>
+      <p>{list.word_6}</p>
     </div>
   );
 }
