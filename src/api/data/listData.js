@@ -26,4 +26,11 @@ const createList = (obj) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-export { getLists, createList };
+const deleteList = (firebaseKey) => new Promise((resolve, reject) => {
+  axios
+    .delete(`${baseURL}/lists/${firebaseKey}.json`)
+    .then(() => getLists().then(resolve))
+    .catch(reject);
+});
+
+export { getLists, createList, deleteList };
