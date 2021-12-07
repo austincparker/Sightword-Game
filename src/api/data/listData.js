@@ -10,4 +10,20 @@ const getLists = () => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-export default getLists;
+const createList = (obj) => new Promise((resolve, reject) => {
+  axios
+    .post(`${baseURL}/lists.json`, obj)
+    .then((response) => {
+      const firebaseKey = response.data.name;
+      axios
+        .patch(`${baseURL}/lists/${firebaseKey}.json`, {
+          firebaseKey,
+        })
+        .then(() => {
+          getLists().then(resolve);
+        });
+    })
+    .catch(reject);
+});
+
+export { getLists, createList };

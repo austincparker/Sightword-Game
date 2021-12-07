@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import { createList } from '../api/data/listData';
 
 const initialState = {
   firebaseKey: '',
@@ -47,7 +48,7 @@ export default function ListForm({ editItem, setLists }) {
       //     history.push('/projects');
       // })
     } else {
-      console.warn(formInput);
+      createList({ ...formInput }).then(() => setLists);
       //   createProject({ ...formInput }).then(() => history.push('/projects'));
       resetForm();
     }
@@ -57,7 +58,7 @@ export default function ListForm({ editItem, setLists }) {
     <div>
       <h1>List Form</h1>
       <div>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="ms-2">
           <div>
             <label htmlFor="name">
               List Name

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import getLists from '../api/data/listData';
+import { getLists } from '../api/data/listData';
 import ListCard from '../components/ListCard';
 import ListForm from '../components/ListForm';
 
