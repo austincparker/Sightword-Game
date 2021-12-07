@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import { createList } from '../api/data/listData';
+import { useHistory } from 'react-router-dom';
+import { createList, updateList } from '../api/data/listData';
 
 const initialState = {
   firebaseKey: '',
@@ -16,6 +17,8 @@ const initialState = {
 
 export default function ListForm({ editItem, setLists }) {
   const [formInput, setFormInput] = useState(initialState);
+
+  const history = useHistory();
 
   useEffect(() => {
     if (editItem.firebaseKey) {
@@ -41,15 +44,15 @@ export default function ListForm({ editItem, setLists }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (editItem.firebaseKey) {
-      console.warn(editItem.name);
+      updateList(editItem.firebaseKey, formInput).then(() => {
+        history.push('/');
+      });
       //   updateProject(obj.firebaseKey, formInput).then(() => {
-      console.warn(setLists);
       resetForm();
       //     history.push('/projects');
       // })
     } else {
       createList({ ...formInput }).then(() => setLists);
-      //   createProject({ ...formInput }).then(() => history.push('/projects'));
       resetForm();
     }
   };
