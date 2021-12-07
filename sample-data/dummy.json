@@ -2,8 +2,8 @@
     "users": {
         "1234asdf" : {
             "firebaseKey": "1234asdf",
-            "full_name": "Austin Parker",
-            "admin": true
+            "full_name": "Dennis Joins",
+            "admin": false
         },
         "5678asdf" : {
             "firebaseKey": "5678asdf",
@@ -14,32 +14,23 @@
     "lists": {
         "9876fdsa" : {
             "firebaseKey": "9876fdsa",
-            "name": "Kindergarten",
-            "grade": "K"
+            "name": "Basic Animals",
+            "grade": "Kindergarten",
+            "word_1": "dog",
+            "word_2": "cow",
+            "word_3": "bird",
+            "word_4": "cat",
+            "word_5": "fish"
         },
         "5432fdsa" : {
             "firebaseKey": "5432fdsa",
-            "name": "First Grade"
-        }
-    },
-    "sightwords": {
-        "6478boya": {
-            "firebaseKey": "6478boya",
-            "name": "boy",
-            "isStruggle": false,
-            "level": 1
-        },
-        "4578dogb": {
-            "firebaseKey": "4578dogb",
-            "name": "dog",
-            "isStruggle": true,
-            "level": 2
-        },
-        "9811girlc": {
-            "firebaseKey": "9811girlc",
-            "name": "girl",
-            "isStruggle": false,
-            "level": 3
+            "name": "More Animals",
+            "grade": "First Grade",
+            "word_1": "horse",
+            "word_2": "tiger",
+            "word_3": "eagle",
+            "word_4": "snake",
+            "word_5": "blowfish"
         }
     },
     "badges": {
@@ -57,25 +48,6 @@
             "firebaseKey": "3333cccc",
             "name": "Second Grade Badge",
             "level": 3
-        }
-
-        
-    },
-    "list_sightword": {
-        "4321poiu": {
-            "firebaseKey": "4321poiu",
-            "list_id": "9876fdsa",
-            "sightword_id": "6478boya"
-        },
-        "8765poyu": {
-            "firebaseKey": "8765poyu",
-            "list_id": "5432fdsa",
-            "sightword_id": "4578dogb"
-        },
-        "6578royi": {
-            "firebaseKey": "6578royi",
-            "list_id": "5432fdsa",
-            "sightword_id": "9811girlc"
         }
     },
     "user_badges": {
