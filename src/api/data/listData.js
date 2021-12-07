@@ -33,4 +33,22 @@ const deleteList = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-export { getLists, createList, deleteList };
+const getSingleList = (firebaseKey) => new Promise((resolve, reject) => {
+  axios
+    .get(`${baseURL}/lists/${firebaseKey}.json`)
+    .then((response) => {
+      resolve(response.data);
+    })
+    .catch(reject);
+});
+
+const updateList = (firebaseKey, updateObj) => new Promise((resolve, reject) => {
+  axios
+    .patch(`${baseURL}/lists/${firebaseKey}.json`, updateObj)
+    .then(() => getLists().then(resolve))
+    .catch(reject);
+});
+
+export {
+  getLists, createList, deleteList, getSingleList, updateList,
+};
