@@ -3,6 +3,7 @@ import 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { signOutUser } from '../api/auth';
 import { createUser, getUserByUid } from '../api/data/userData';
+import Navigation from '../components/Navigation';
 import Routes from '../routes';
 import SignIn from '../views/SignIn';
 
@@ -46,6 +47,7 @@ function Initialize() {
       {user ? (
         <>
           <h1>You are logged in.</h1>
+          <Navigation />
           <Routes admin={admin} user={user} />
           <button type="button" onClick={signOutUser}>
             Logout
