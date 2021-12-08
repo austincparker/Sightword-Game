@@ -5,6 +5,7 @@ import SingleWord from '../components/SingleWord';
 
 export default function Play() {
   const [playList, setPlayList] = useState({});
+  const [score, setScore] = useState(0);
   const { key } = useParams();
 
   useEffect(() => {
@@ -14,7 +15,7 @@ export default function Play() {
   return (
     <div>
       <h1>this is list {playList.name}</h1>
-      <SingleWord list={playList} />
+      <SingleWord list={playList} score={score} setScore={setScore} />
     </div>
   );
 }
