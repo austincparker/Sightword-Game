@@ -13,9 +13,11 @@ export default function Play() {
   });
 
   return (
-    <div>
+    <div className="text-center">
       <h1>this is list {playList.name}</h1>
       <SingleWord list={playList} score={score} setScore={setScore} />
+      <button type="button">wrong</button>
+      <button type="button">right</button>
     </div>
   );
 }
