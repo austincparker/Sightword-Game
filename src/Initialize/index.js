@@ -35,7 +35,7 @@ function Initialize() {
     });
   }, []);
   if (admin) {
-    console.warn('this is the admin uid');
+    console.warn('vvv this is the admin uid vvv');
     console.warn(admin.uid);
     console.warn('^^^^^');
   }
