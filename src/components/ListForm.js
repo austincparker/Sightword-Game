@@ -207,7 +207,7 @@ export default function ListForm({ editItem, setLists }) {
             </label>
           </div>
           <button className="btn btn-success" type="submit">
-            {editItem.firebaseKey ? 'Update' : 'Submit'}
+            {editItem.firebaseKey ? 'Update' : 'Create'}
           </button>
         </form>
       </div>
