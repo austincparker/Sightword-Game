@@ -13,6 +13,7 @@
     },
     "lists": {
         "9876fdsa" : {
+            "badgeUrl": "https://www.pikpng.com/pngl/m/204-2041643_boss-logo-icon-02-react-logo-small-clipart.png",
             "firebaseKey": "9876fdsa",
             "name": "Basic Animals",
             "grade": "Kindergarten",
@@ -24,6 +25,7 @@
             "word_6": "frog"
         },
         "5432fdsa" : {
+            "badgeUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
             "firebaseKey": "5432fdsa",
             "name": "More Animals",
             "grade": "First Grade",
