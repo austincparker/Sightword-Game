@@ -7,7 +7,13 @@ export default function Home({ user }) {
   const [lists, setLists] = useState([]);
 
   useEffect(() => {
-    getLists().then(setLists);
+    let isMounted = true;
+    getLists().then((listArray) => {
+      if (isMounted) setLists(listArray);
+    });
+    return () => {
+      isMounted = false;
+    };
   });
 
   return (
