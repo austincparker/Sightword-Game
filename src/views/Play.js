@@ -6,7 +6,7 @@ import SingleWord from '../components/SingleWord';
 export default function Play() {
   const [playList, setPlayList] = useState({});
   const [score, setScore] = useState(0);
-  const [current, setCurrent] = useState(0);
+  const [current, setCurrent] = useState(1);
   const [word, setWord] = useState('');
   const { key } = useParams();
 
@@ -23,8 +23,8 @@ export default function Play() {
     let isMounted = true;
     getSingleList(key).then((list) => {
       if (isMounted) setPlayList(list);
+      setWord(list.word_1);
     });
-    setWord(playWords[0]);
     return () => {
       isMounted = false;
     };
@@ -35,9 +35,10 @@ export default function Play() {
       setCurrent(current + 1);
       setScore(score + 1);
       setWord(playWords[current]);
+    } else if (score === 5 && current === 6) {
+      setScore(100);
     } else {
-      setScore(6);
-      console.warn('you hit 6');
+      console.warn(`you missed ${current - score - 1}`);
     }
   };
 
@@ -47,7 +48,7 @@ export default function Play() {
       setWord(playWords[current]);
     } else {
       setCurrent(6);
-      console.warn('you hit 6');
+      console.warn(`you missed ${current - score}`);
     }
   };
 
@@ -56,12 +57,8 @@ export default function Play() {
   return (
     <div className="text-center">
       <h1>this is list {playList.name}</h1>
-      <SingleWord
-        list={playList}
-        score={score}
-        setScore={setScore}
-        word={word}
-      />
+      <h2 className="text-muted">word {current}</h2>
+      <SingleWord word={word} />
       <button type="button" onClick={handleWrong}>
         wrong
       </button>

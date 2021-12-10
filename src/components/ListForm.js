@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
 import { createList, updateList } from '../api/data/listData';
+import { createBadge } from '../api/data/badgeData';
 
 const initialState = {
   firebaseKey: '',
@@ -13,6 +14,7 @@ const initialState = {
   word_4: '',
   word_5: '',
   word_6: '',
+  badge_url: '',
 };
 
 export default function ListForm({ editItem, setLists }) {
@@ -53,6 +55,11 @@ export default function ListForm({ editItem, setLists }) {
       // })
     } else {
       createList({ ...formInput }).then(() => setLists);
+      createBadge({
+        imgUrl: formInput.badgeUrl,
+        level: '',
+        name: formInput.name,
+      });
       resetForm();
     }
   };
@@ -202,6 +209,24 @@ export default function ListForm({ editItem, setLists }) {
                 value={formInput.word_6}
                 onChange={handleChange}
                 required
+                className="m-2"
+              />
+            </label>
+          </div>
+          <div>
+            <label htmlFor="badgeUrl">
+              Badge Image Url
+              <input
+                style={{
+                  border: '2px solid black',
+                  height: '2rem',
+                  width: '30rem',
+                }}
+                type="url"
+                id="badgeUrl"
+                name="badgeUrl"
+                value={formInput.badgeUrl}
+                onChange={handleChange}
                 className="m-2"
               />
             </label>
