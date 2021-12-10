@@ -10,10 +10,8 @@ export default function SingleWord({ word }) {
 }
 
 SingleWord.defaultProps = {
-  // list: {},
   word: '',
 };
 SingleWord.propTypes = {
-  // list: PropTypes.shape(PropTypes.obj),
   word: PropTypes.string,
 };
