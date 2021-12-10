@@ -38,8 +38,7 @@ export default function Play() {
     } else if (score === 5 && current === 6) {
       setScore(100);
     } else {
-      setScore(score);
-      console.warn('you hit 6');
+      console.warn(`you missed ${current - score - 1}`);
     }
   };
 
@@ -49,7 +48,7 @@ export default function Play() {
       setWord(playWords[current]);
     } else {
       setCurrent(6);
-      console.warn('you hit 6');
+      console.warn(`you missed ${current - score}`);
     }
   };
 
@@ -58,9 +57,10 @@ export default function Play() {
   return (
     <div className="text-center">
       <h1>this is list {playList.name}</h1>
+      <h2 className="text-muted">word {current}</h2>
       <SingleWord word={word} />
       <button type="button" onClick={handleWrong}>
-        wrong {current}
+        wrong
       </button>
       <button type="button" onClick={handleCorrect}>
         right {score}
