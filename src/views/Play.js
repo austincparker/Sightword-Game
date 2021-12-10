@@ -35,6 +35,8 @@ export default function Play() {
       setCurrent(current + 1);
       setScore(score + 1);
       setWord(playWords[current]);
+    } else if (score === 5 && current === 6) {
+      setScore(100);
     } else {
       setScore(score);
       console.warn('you hit 6');
@@ -58,7 +60,7 @@ export default function Play() {
       <h1>this is list {playList.name}</h1>
       <SingleWord word={word} />
       <button type="button" onClick={handleWrong}>
-        wrong
+        wrong {current}
       </button>
       <button type="button" onClick={handleCorrect}>
         right {score}
