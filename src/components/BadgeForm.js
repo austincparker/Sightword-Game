@@ -50,7 +50,7 @@ export default function BadgeForm({ editItem, setBadges }) {
       <div>
         <form onSubmit={handleSubmit} className="ms-2">
           <div>
-            <label htmlFor="name">
+            <label htmlFor="bname">
               Badge Name
               <input
                 style={{
@@ -58,8 +58,8 @@ export default function BadgeForm({ editItem, setBadges }) {
                   height: '2rem',
                   width: '30rem',
                 }}
-                id="name"
-                name="name"
+                id="bname"
+                name="bname"
                 value={formInput.name}
                 onChange={handleChange}
                 required
