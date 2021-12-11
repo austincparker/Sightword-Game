@@ -29,12 +29,16 @@ const getBadgesByUid = (uid) => new Promise((resolve, reject) => {
   getUserBadgesByUid(uid)
     .then((userBadgeArray) => {
       userBadgeArray.map((userBadgeObj) => getBadgeByBadgeId(userBadgeObj.badge_id).then((badgeObj) => {
-        console.warn(userBadgeObj);
-        console.warn(badgeObj);
+        // console.warn(userBadgeObj);
+        // console.warn(badgeObj);
         badgeArray.push(badgeObj);
+        // console.warn(badgeArray);
       }));
     })
-    .then(() => resolve(Object.values(badgeArray)))
+    .then(() => {
+      // console.warn(badgeArray);
+      resolve(badgeArray);
+    })
     .catch(reject);
 });
 
