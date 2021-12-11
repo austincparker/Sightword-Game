@@ -20,7 +20,7 @@ export default function Home({ user }) {
     return () => {
       isMounted = false;
     };
-  });
+  }, []);
 
   return (
     <div>

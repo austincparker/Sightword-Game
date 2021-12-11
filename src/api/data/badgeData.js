@@ -25,13 +25,13 @@ const getUserBadgesByUid = (uid) => new Promise((resolve, reject) => {
 });
 
 const getBadgesByUid = (uid) => new Promise((resolve, reject) => {
+  const badgeArray = [];
   getUserBadgesByUid(uid)
     .then((userBadgeArray) => {
-      const badgeArray = [];
       userBadgeArray.map((userBadgeObj) => getBadgeByBadgeId(userBadgeObj.badge_id).then((badgeObj) => badgeArray.push(badgeObj)));
       console.warn(badgeArray);
     })
-    .then((response) => resolve(Object.values(response.data)))
+    .then(() => resolve(Object.values(badgeArray)))
     .catch(reject);
 });
 
