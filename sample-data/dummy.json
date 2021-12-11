@@ -9,11 +9,18 @@
             "firebaseKey": "5678asdf",
             "full_name": "Ralph Tato",
             "admin": false
+        },
+        "-MqLcj7K0jvqux8ZmVi2": {
+            "admin": false,
+            "firebaseKey": "-MqLcj7K0jvqux8ZmVi2",
+            "fullName": "Katie Parker",
+            "uid": "rU0HxjNoyAhXHqoFHxEPN64ZTYx2"
         }
     },
     "lists": {
         "9876fdsa" : {
             "badgeUrl": "https://www.pikpng.com/pngl/m/204-2041643_boss-logo-icon-02-react-logo-small-clipart.png",
+            "badge_id": "1111aaaa",
             "firebaseKey": "9876fdsa",
             "name": "Basic Animals",
             "grade": "Kindergarten",
@@ -26,6 +33,7 @@
         },
         "5432fdsa" : {
             "badgeUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+            "badge_id": "2222bbbb",
             "firebaseKey": "5432fdsa",
             "name": "More Animals",
             "grade": "First Grade",
