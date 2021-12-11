@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import ListCard from '../components/ListCard';
 import { getLists } from '../api/data/listData';
-import { getUserBadgesByUid } from '../api/data/badgeData';
+import { getBadgesByUid } from '../api/data/badgeData';
 import Badges from '../components/Badges';
 
 export default function Home({ user }) {
@@ -14,7 +14,7 @@ export default function Home({ user }) {
     getLists().then((listArray) => {
       if (isMounted) setLists(listArray);
     });
-    getUserBadgesByUid(user.uid).then((badgeArray) => {
+    getBadgesByUid(user.uid).then((badgeArray) => {
       if (isMounted) setBadges(badgeArray);
     });
     return () => {

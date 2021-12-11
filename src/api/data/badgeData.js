@@ -10,6 +10,13 @@ const getBadges = () => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const getBadgeByBadgeId = (badgeId) => new Promise((resolve, reject) => {
+  axios
+    .get(`${baseURL}/badges/${badgeId}.json`)
+    .then((response) => resolve(Object.values(response.data)))
+    .catch(reject);
+});
+
 const getUserBadgesByUid = (uid) => new Promise((resolve, reject) => {
   axios
     .get(`${baseURL}/user_badges.json?orderBy="user_id"&equalTo="${uid}"`)
@@ -17,9 +24,13 @@ const getUserBadgesByUid = (uid) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-const getBadgesByBadgeId = (badgeId) => new Promise((resolve, reject) => {
-  axios
-    .get(`${baseURL}/badges.json?orderBy="firebaseKey"&equalTo="${badgeId}"`)
+const getBadgesByUid = (uid) => new Promise((resolve, reject) => {
+  getUserBadgesByUid(uid)
+    .then((userBadgeArray) => {
+      const badgeArray = [];
+      userBadgeArray.map((userBadgeObj) => getBadgeByBadgeId(userBadgeObj.badge_id).then((badgeObj) => badgeArray.push(badgeObj)));
+      console.warn(badgeArray);
+    })
     .then((response) => resolve(Object.values(response.data)))
     .catch(reject);
 });
@@ -41,5 +52,9 @@ const createBadge = (obj) => new Promise((resolve, reject) => {
 });
 
 export {
-  getBadges, createBadge, getUserBadgesByUid, getBadgesByBadgeId,
+  getBadges,
+  createBadge,
+  getUserBadgesByUid,
+  getBadgeByBadgeId,
+  getBadgesByUid,
 };
