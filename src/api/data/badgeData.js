@@ -13,7 +13,7 @@ const getBadges = () => new Promise((resolve, reject) => {
 const getBadgeByBadgeId = (badgeId) => new Promise((resolve, reject) => {
   axios
     .get(`${baseURL}/badges/${badgeId}.json`)
-    .then((response) => resolve(Object.values(response.data)))
+    .then((response) => resolve(response.data))
     .catch(reject);
 });
 
@@ -28,8 +28,11 @@ const getBadgesByUid = (uid) => new Promise((resolve, reject) => {
   const badgeArray = [];
   getUserBadgesByUid(uid)
     .then((userBadgeArray) => {
-      userBadgeArray.map((userBadgeObj) => getBadgeByBadgeId(userBadgeObj.badge_id).then((badgeObj) => badgeArray.push(badgeObj)));
-      console.warn(badgeArray);
+      userBadgeArray.map((userBadgeObj) => getBadgeByBadgeId(userBadgeObj.badge_id).then((badgeObj) => {
+        console.warn(userBadgeObj);
+        console.warn(badgeObj);
+        badgeArray.push(badgeObj);
+      }));
     })
     .then(() => resolve(Object.values(badgeArray)))
     .catch(reject);
