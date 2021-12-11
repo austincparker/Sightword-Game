@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
 import { createList, updateList } from '../api/data/listData';
-import { createBadge } from '../api/data/badgeData';
 
 const initialState = {
   firebaseKey: '',
@@ -55,11 +54,6 @@ export default function ListForm({ editItem, setLists }) {
       // })
     } else {
       createList({ ...formInput }).then(() => setLists);
-      createBadge({
-        imgUrl: formInput.badgeUrl,
-        level: '',
-        name: formInput.name,
-      });
       resetForm();
     }
   };

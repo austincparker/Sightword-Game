@@ -8,6 +8,7 @@ export default function Play() {
   const [score, setScore] = useState(0);
   const [current, setCurrent] = useState(1);
   const [word, setWord] = useState('');
+  const [results, setResults] = useState('');
   const { key } = useParams();
 
   const playWords = [
@@ -36,9 +37,13 @@ export default function Play() {
       setScore(score + 1);
       setWord(playWords[current]);
     } else if (score === 5 && current === 6) {
-      setScore(100);
+      setScore(6);
+      setResults('you did it!');
+    } else if (score === 6) {
+      setResults('you got them all! try another list');
     } else {
       console.warn(`you missed ${current - score - 1}`);
+      setResults(`you missed ${current - score - 1}`);
     }
   };
 
@@ -48,7 +53,7 @@ export default function Play() {
       setWord(playWords[current]);
     } else {
       setCurrent(6);
-      console.warn(`you missed ${current - score}`);
+      setResults(`you missed ${current - score}`);
     }
   };
 
@@ -65,6 +70,7 @@ export default function Play() {
       <button type="button" onClick={handleCorrect}>
         right {score}
       </button>
+      <h3>{results}</h3>
     </div>
   );
 }

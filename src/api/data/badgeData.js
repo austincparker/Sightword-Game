@@ -10,6 +10,13 @@ const getBadges = () => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const getBadgeByBadgeId = (badgeId) => new Promise((resolve, reject) => {
+  axios
+    .get(`${baseURL}/badges/${badgeId}.json`)
+    .then((response) => resolve(response.data))
+    .catch(reject);
+});
+
 const getUserBadgesByUid = (uid) => new Promise((resolve, reject) => {
   axios
     .get(`${baseURL}/user_badges.json?orderBy="user_id"&equalTo="${uid}"`)
@@ -17,10 +24,21 @@ const getUserBadgesByUid = (uid) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-const getBadgesByBadgeId = (badgeId) => new Promise((resolve, reject) => {
-  axios
-    .get(`${baseURL}/badges.json?orderBy="firebaseKey"&equalTo="${badgeId}"`)
-    .then((response) => resolve(Object.values(response.data)))
+const getBadgesByUid = (uid) => new Promise((resolve, reject) => {
+  const badgeArray = [];
+  getUserBadgesByUid(uid)
+    .then((userBadgeArray) => {
+      userBadgeArray.map((userBadgeObj) => getBadgeByBadgeId(userBadgeObj.badge_id).then((badgeObj) => {
+        // console.warn(userBadgeObj);
+        // console.warn(badgeObj);
+        badgeArray.push(badgeObj);
+        // console.warn(badgeArray);
+      }));
+    })
+    .then(() => {
+      // console.warn(badgeArray);
+      resolve(badgeArray);
+    })
     .catch(reject);
 });
 
@@ -41,5 +59,9 @@ const createBadge = (obj) => new Promise((resolve, reject) => {
 });
 
 export {
-  getBadges, createBadge, getUserBadgesByUid, getBadgesByBadgeId,
+  getBadges,
+  createBadge,
+  getUserBadgesByUid,
+  getBadgeByBadgeId,
+  getBadgesByUid,
 };
