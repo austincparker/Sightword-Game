@@ -10,13 +10,17 @@ export default function Home({ user }) {
   const [badges, setBadges] = useState([]);
 
   useEffect(() => {
+    let isMounted = true;
     getLists().then((listArray) => {
-      setLists(listArray);
+      if (isMounted) setLists(listArray);
     });
     getBadgesByUid(user.uid).then((badgeArray) => {
-      console.warn(badgeArray);
-      setBadges(badgeArray);
+      if (isMounted) console.warn(badgeArray);
+      if (isMounted) setBadges(badgeArray);
     });
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   return (

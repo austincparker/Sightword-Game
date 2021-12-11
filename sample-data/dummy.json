@@ -47,22 +47,22 @@
     "badges": {
         "1111aaaa": {
             "firebaseKey": "1111aaaa",
-            "name": "Kindergarten Animal Badge",
+            "name": "Even Harder Animals Badge",
             "level": 1,
             "imgUrl": "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png",
             "list_id": "9876fdsa"
         },
         "2222bbbb": {
             "firebaseKey": "2222bbbb",
-            "name": "First Grade Animal Badge",
+            "name": "More Animals Badge",
             "level": 2,
             "imgUrl": "https://pbs.twimg.com/profile_images/1410632439370641409/Pt-7RucE_400x400.jpg",
             "list_id": "5432fdsa"
         },
         "3333cccc": {
             "firebaseKey": "3333cccc",
-            "name": "Second Grade Animal Badge",
-            "level": 3,
+            "name": "Basic Animals Badge",
+            "level": 1,
             "imgUrl": "https://miro.medium.com/max/600/1*R4c8lHBHuH5qyqOtZb3h-w.png",
             "list_id": ""
         }

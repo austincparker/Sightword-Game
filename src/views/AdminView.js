@@ -3,13 +3,18 @@ import PropTypes from 'prop-types';
 import { getLists } from '../api/data/listData';
 import ListCard from '../components/ListCard';
 import ListForm from '../components/ListForm';
+import { getBadges } from '../api/data/badgeData';
+import Badges from '../components/Badges';
+import BadgeForm from '../components/BadgeForm';
 
 export default function AdminView({ admin }) {
   const [lists, setLists] = useState([]);
+  const [badges, setBadges] = useState([]);
 
   useEffect(() => {
     getLists().then(setLists);
-  });
+    getBadges().then(setBadges);
+  }, []);
 
   return (
     <div>
@@ -20,6 +25,14 @@ export default function AdminView({ admin }) {
       <div className="list-space d-flex flex-wrap">
         {lists.map((list) => (
           <ListCard key={list.firebaseKey} list={list} admin={admin} />
+        ))}
+      </div>
+      <div>
+        <BadgeForm setBadges={setBadges} />
+      </div>
+      <div className="badge-space d-flex flex-wrap">
+        {badges.map((badge) => (
+          <Badges key={badge.firebaseKey} badge={badge} admin={admin} />
         ))}
       </div>
     </div>
