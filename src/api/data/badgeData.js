@@ -58,10 +58,18 @@ const createBadge = (obj) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const deleteBadge = (firebaseKey) => new Promise((resolve, reject) => {
+  axios
+    .delete(`${baseURL}/badges/${firebaseKey}.json`)
+    .then(() => getBadges().then(resolve))
+    .catch(reject);
+});
+
 export {
   getBadges,
   createBadge,
   getUserBadgesByUid,
   getBadgeByBadgeId,
   getBadgesByUid,
+  deleteBadge,
 };
