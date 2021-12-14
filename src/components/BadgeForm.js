@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { createBadge } from '../api/data/badgeData';
+import { getLists } from '../api/data/listData';
 
 const initialState = {
   firebaseKey: '',
@@ -12,12 +13,15 @@ const initialState = {
 
 export default function BadgeForm({ editItem, setBadges }) {
   const [formInput, setFormInput] = useState(initialState);
+  const [selectLists, setSelectLists] = useState([]);
 
   useEffect(() => {
     if (editItem.firebaseKey) {
       setFormInput(editItem);
+      getLists().then(setSelectLists);
     } else {
       setFormInput(initialState);
+      getLists().then(setSelectLists);
     }
   }, [editItem]);
 
@@ -69,7 +73,7 @@ export default function BadgeForm({ editItem, setBadges }) {
           </div>
           <div>
             <label htmlFor="level">
-              Bradge Level
+              Badge Level
               <input
                 style={{
                   border: '2px solid black',
@@ -102,6 +106,17 @@ export default function BadgeForm({ editItem, setBadges }) {
                 className="m-2"
               />
             </label>
+          </div>
+          <div>
+            <select className="form-select" aria-label="Default select example">
+              <option defaultValue>Select List</option>
+              {selectLists.map((list) => (
+                <option value={list.firebaseKey} key={list.firebaseKey}>
+                  {list.name}
+                </option>
+              ))}
+              ;
+            </select>
           </div>
           <button className="btn btn-success" type="submit">
             {editItem.firebaseKey ? 'Update' : 'Create'}

@@ -29,13 +29,13 @@ export default function Home({ user }) {
       <h5>My Badges</h5>
       <div className="badge-space d-flex flex-wrap">
         {badges.map((badge) => (
-          <Badges key={badge.firebaseKey} badge={badge} />
+          <Badges key={badge.firebaseKey} badge={badge} setBadges={setBadges} />
         ))}
       </div>
       <h5>Pick a list to play!</h5>
       <div className="list-space d-flex flex-wrap">
         {lists.map((list) => (
-          <ListCard key={list.firebaseKey} list={list} />
+          <ListCard key={list.firebaseKey} list={list} setLists={setLists} />
         ))}
       </div>
     </div>
