@@ -110,13 +110,15 @@ export default function BadgeForm({ editItem, setBadges }) {
           </div>
           <div>
             <select
+              // value={formInput.list_id}
+              // onChange={handleChange}
               className="form-select m-2"
               aria-label="Default select example"
               required
             >
               <option defaultValue>Select List</option>
               {selectLists.map((list) => (
-                <option value={formInput.list_id} key={list.firebaseKey}>
+                <option value={list.firebaseKey} key={list.firebaseKey}>
                   {list.name}
                 </option>
               ))}
