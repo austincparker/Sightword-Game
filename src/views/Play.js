@@ -38,12 +38,12 @@ export default function Play() {
       setWord(playWords[current]);
     } else if (score === 5 && current === 6) {
       setScore(6);
-      setResults('you did it!');
+      setResults('You did it!');
     } else if (score === 6) {
-      setResults('you got them all! try another list');
+      setResults('You got them all! Try another list!');
     } else {
       console.warn(`you missed ${current - score - 1}`);
-      setResults(`you missed ${current - score - 1}`);
+      setResults(`You missed ${current - score - 1}.`);
     }
   };
 
@@ -53,13 +53,13 @@ export default function Play() {
       setWord(playWords[current]);
     } else {
       setCurrent(6);
-      setResults(`you missed ${current - score}`);
+      setResults(`You missed ${current - score}.`);
     }
   };
 
   return (
     <div className="text-center">
-      <h1>This is list: {playList.name}</h1>
+      <h1>{playList.name}</h1>
       <h2 className="text-muted">Word {current}</h2>
       <SingleWord word={word} />
       <div className="btn-group">

@@ -15,7 +15,6 @@ export default function Home({ user }) {
       if (isMounted) setLists(listArray);
     });
     getBadgesByUid(user.uid).then((badgeArray) => {
-      if (isMounted) console.warn(badgeArray);
       if (isMounted) setBadges(badgeArray);
     });
     return () => {
