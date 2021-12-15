@@ -42,11 +42,8 @@ function Initialize() {
   }
   return (
     <div className="App">
-      <h1 className="display-1 text-center"> Sightword Capstone </h1>
-      <h3 className="text-center text-muted display-3">is comin at ya...</h3>
       {user ? (
         <>
-          <h1>You are logged in.</h1>
           <Navigation />
           <Routes admin={admin} user={user} />
           <button type="button" onClick={signOutUser}>

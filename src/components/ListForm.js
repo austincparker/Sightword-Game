@@ -60,16 +60,14 @@ export default function ListForm({ editItem, setLists }) {
 
   return (
     <div>
-      <h1>List Form</h1>
+      <h1>Make a New List</h1>
       <div>
         <form onSubmit={handleSubmit} className="ms-2">
           <div>
-            <label htmlFor="name">
+            <label htmlFor="name" className="form-label">
               List Name
               <input
                 style={{
-                  border: '2px solid black',
-                  height: '2rem',
                   width: '30rem',
                 }}
                 id="name"
@@ -77,17 +75,15 @@ export default function ListForm({ editItem, setLists }) {
                 value={formInput.name}
                 onChange={handleChange}
                 required
-                className="m-2"
+                className="form-control"
               />
             </label>
           </div>
           <div>
-            <label htmlFor="grade">
+            <label htmlFor="grade" className="form-label">
               List Grade
               <input
                 style={{
-                  border: '2px solid black',
-                  height: '2rem',
                   width: '30rem',
                 }}
                 id="grade"
@@ -95,17 +91,15 @@ export default function ListForm({ editItem, setLists }) {
                 value={formInput.grade}
                 onChange={handleChange}
                 required
-                className="m-2"
+                className="form-control"
               />
             </label>
           </div>
           <div>
-            <label htmlFor="word_1">
+            <label htmlFor="word_1" className="form-label">
               Word 1
               <input
                 style={{
-                  border: '2px solid black',
-                  height: '2rem',
                   width: '30rem',
                 }}
                 id="word_1"
@@ -113,17 +107,15 @@ export default function ListForm({ editItem, setLists }) {
                 value={formInput.word_1}
                 onChange={handleChange}
                 required
-                className="m-2"
+                className="form-control"
               />
             </label>
           </div>
           <div>
-            <label htmlFor="word_2">
+            <label htmlFor="word_2" className="form-label">
               Word 2
               <input
                 style={{
-                  border: '2px solid black',
-                  height: '2rem',
                   width: '30rem',
                 }}
                 id="word_2"
@@ -131,17 +123,15 @@ export default function ListForm({ editItem, setLists }) {
                 value={formInput.word_2}
                 onChange={handleChange}
                 required
-                className="m-2"
+                className="form-control"
               />
             </label>
           </div>
           <div>
-            <label htmlFor="word_3">
+            <label htmlFor="word_3" className="form-label">
               Word 3
               <input
                 style={{
-                  border: '2px solid black',
-                  height: '2rem',
                   width: '30rem',
                 }}
                 id="word_3"
@@ -149,17 +139,15 @@ export default function ListForm({ editItem, setLists }) {
                 value={formInput.word_3}
                 onChange={handleChange}
                 required
-                className="m-2"
+                className="form-control"
               />
             </label>
           </div>
           <div>
-            <label htmlFor="word_4">
+            <label htmlFor="word_4" className="form-label">
               Word 4
               <input
                 style={{
-                  border: '2px solid black',
-                  height: '2rem',
                   width: '30rem',
                 }}
                 id="word_4"
@@ -167,17 +155,15 @@ export default function ListForm({ editItem, setLists }) {
                 value={formInput.word_4}
                 onChange={handleChange}
                 required
-                className="m-2"
+                className="form-control"
               />
             </label>
           </div>
           <div>
-            <label htmlFor="word_5">
+            <label htmlFor="word_5" className="form-label">
               Word 5
               <input
                 style={{
-                  border: '2px solid black',
-                  height: '2rem',
                   width: '30rem',
                 }}
                 id="word_5"
@@ -185,17 +171,15 @@ export default function ListForm({ editItem, setLists }) {
                 value={formInput.word_5}
                 onChange={handleChange}
                 required
-                className="m-2"
+                className="form-control"
               />
             </label>
           </div>
           <div>
-            <label htmlFor="word_6">
+            <label htmlFor="word_6" className="form-label">
               Word 6
               <input
                 style={{
-                  border: '2px solid black',
-                  height: '2rem',
                   width: '30rem',
                 }}
                 id="word_6"
@@ -203,17 +187,15 @@ export default function ListForm({ editItem, setLists }) {
                 value={formInput.word_6}
                 onChange={handleChange}
                 required
-                className="m-2"
+                className="form-control"
               />
             </label>
           </div>
           <div>
-            <label htmlFor="badgeUrl">
+            <label htmlFor="badgeUrl" className="form-label">
               Badge Image Url
               <input
                 style={{
-                  border: '2px solid black',
-                  height: '2rem',
                   width: '30rem',
                 }}
                 type="url"
@@ -221,7 +203,7 @@ export default function ListForm({ editItem, setLists }) {
                 name="badgeUrl"
                 value={formInput.badgeUrl}
                 onChange={handleChange}
-                className="m-2"
+                className="form-control"
               />
             </label>
           </div>

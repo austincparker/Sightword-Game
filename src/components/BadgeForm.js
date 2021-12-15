@@ -51,16 +51,14 @@ export default function BadgeForm({ editItem, setBadges }) {
 
   return (
     <div>
-      <h3>Badge Form</h3>
+      <h3>Make a New Badge</h3>
       <div>
         <form onSubmit={handleSubmit} className="ms-2">
           <div>
-            <label htmlFor="bname">
+            <label htmlFor="bname" className="form-label">
               Badge Name
               <input
                 style={{
-                  border: '2px solid black',
-                  height: '2rem',
                   width: '30rem',
                 }}
                 id="badge_name"
@@ -68,17 +66,15 @@ export default function BadgeForm({ editItem, setBadges }) {
                 value={formInput.badge_name}
                 onChange={handleChange}
                 required
-                className="m-2"
+                className="form-control"
               />
             </label>
           </div>
           <div>
-            <label htmlFor="level">
+            <label htmlFor="level" className="form-label">
               Badge Level
               <input
                 style={{
-                  border: '2px solid black',
-                  height: '2rem',
                   width: '30rem',
                 }}
                 id="level"
@@ -86,7 +82,7 @@ export default function BadgeForm({ editItem, setBadges }) {
                 value={formInput.level}
                 onChange={handleChange}
                 required
-                className="m-2"
+                className="form-control"
               />
             </label>
           </div>
@@ -95,8 +91,6 @@ export default function BadgeForm({ editItem, setBadges }) {
               Badge Image Url
               <input
                 style={{
-                  border: '2px solid black',
-                  height: '2rem',
                   width: '30rem',
                 }}
                 type="url"
@@ -104,26 +98,32 @@ export default function BadgeForm({ editItem, setBadges }) {
                 name="imgUrl"
                 value={formInput.imgUrl}
                 onChange={handleChange}
-                className="m-2"
+                className="form-control"
               />
             </label>
           </div>
-          <div>
-            <select
-              // value={formInput.list_id}
-              // onChange={handleChange}
-              className="form-select m-2"
-              aria-label="Default select example"
-              required
-            >
-              <option defaultValue>Select List</option>
-              {selectLists.map((list) => (
-                <option value={list.firebaseKey} key={list.firebaseKey}>
-                  {list.name}
-                </option>
-              ))}
-              ;
-            </select>
+          <div className="m-2">
+            <label>
+              For Which List?
+              <select
+                // value={formInput.list_id}
+                // onChange={handleChange}
+                style={{
+                  width: '30rem',
+                }}
+                className="form-select m-auto"
+                aria-label="Default select example"
+                required
+              >
+                <option defaultValue>Select List</option>
+                {selectLists.map((list) => (
+                  <option value={list.firebaseKey} key={list.firebaseKey}>
+                    {list.name}
+                  </option>
+                ))}
+                ;
+              </select>
+            </label>
           </div>
           <button className="btn btn-success" type="submit">
             {editItem.firebaseKey ? 'Update' : 'Create'}

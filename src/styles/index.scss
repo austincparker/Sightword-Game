@@ -5,6 +5,15 @@ body {
   background-color: $favColor !important;
 }
 
+input {
+  display: block;
+}
+
+.list-card {
+  background-color: white;
+  border-radius: 1rem;
+}
+
 .play-card {
   background-color: white;
 }

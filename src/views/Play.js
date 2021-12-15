@@ -57,19 +57,23 @@ export default function Play() {
     }
   };
 
-  // console.warn(playWords[1]);
-
   return (
     <div className="text-center">
-      <h1>this is list {playList.name}</h1>
-      <h2 className="text-muted">word {current}</h2>
+      <h1>This is list: {playList.name}</h1>
+      <h2 className="text-muted">Word {current}</h2>
       <SingleWord word={word} />
-      <button type="button" onClick={handleWrong}>
-        wrong
-      </button>
-      <button type="button" onClick={handleCorrect}>
-        right {score}
-      </button>
+      <div className="btn-group">
+        <button type="button" onClick={handleWrong} className="btn btn-danger">
+          Wrong
+        </button>
+        <button
+          type="button"
+          onClick={handleCorrect}
+          className="btn btn-primary"
+        >
+          Right
+        </button>
+      </div>
       <h3>{results}</h3>
     </div>
   );
