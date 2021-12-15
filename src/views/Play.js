@@ -63,13 +63,17 @@ export default function Play() {
       <h2 className="text-muted">Word {current}</h2>
       <SingleWord word={word} />
       <div className="btn-group">
-        <button type="button" onClick={handleWrong} className="btn btn-danger">
+        <button
+          type="button"
+          onClick={handleWrong}
+          className="btn btn-outline-danger"
+        >
           Wrong
         </button>
         <button
           type="button"
           onClick={handleCorrect}
-          className="btn btn-primary"
+          className="btn btn-outline-primary"
         >
           Right
         </button>

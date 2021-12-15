@@ -12,7 +12,7 @@ export default function Badges({ badge, admin, setBadges }) {
   };
 
   return (
-    <div className="card m-2 p-3" style={{ width: 200 }}>
+    <div className="badge-card m-2 p-3" style={{ width: 200 }}>
       <img src={badge.imgUrl} alt="badge" width="50px" className="m-auto" />
       <h4>{badge.badge_name}</h4>
       {admin ? (

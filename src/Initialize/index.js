@@ -18,7 +18,6 @@ function Initialize() {
           uid: authed.uid,
           admin: false,
         };
-        console.warn(userInfoObj.fullName);
         getUserByUid(authed.uid).then((taco) => {
           if (taco && taco.admin) {
             setUser(taco);
@@ -35,18 +34,17 @@ function Initialize() {
       }
     });
   }, []);
-  if (admin) {
-    console.warn('vvv this is the admin uid vvv');
-    console.warn(admin.uid);
-    console.warn('^^^^^');
-  }
   return (
-    <div className="App">
+    <div className="App container pb-3">
       {user ? (
         <>
           <Navigation />
           <Routes admin={admin} user={user} />
-          <button type="button" onClick={signOutUser}>
+          <button
+            type="button"
+            onClick={signOutUser}
+            className="btn btn-outline-danger"
+          >
             Logout
           </button>
         </>
