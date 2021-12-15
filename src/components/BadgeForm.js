@@ -5,7 +5,7 @@ import { getLists } from '../api/data/listData';
 
 const initialState = {
   firebaseKey: '',
-  name: '',
+  badge_name: '',
   level: '',
   imgUrl: '',
   list_id: '',
@@ -43,6 +43,7 @@ export default function BadgeForm({ editItem, setBadges }) {
     if (editItem.firebaseKey) {
       console.warn(editItem);
     } else {
+      console.warn(formInput);
       createBadge({ ...formInput }).then(() => setBadges);
       resetForm();
     }
@@ -62,9 +63,9 @@ export default function BadgeForm({ editItem, setBadges }) {
                   height: '2rem',
                   width: '30rem',
                 }}
-                id="bname"
-                name="bname"
-                value={formInput.name}
+                id="badge_name"
+                name="badge_name"
+                value={formInput.badge_name}
                 onChange={handleChange}
                 required
                 className="m-2"
@@ -108,7 +109,13 @@ export default function BadgeForm({ editItem, setBadges }) {
             </label>
           </div>
           <div>
-            <select className="form-select" aria-label="Default select example">
+            <select
+              // value={formInput.list_id}
+              // onChange={handleChange}
+              className="form-select m-2"
+              aria-label="Default select example"
+              required
+            >
               <option defaultValue>Select List</option>
               {selectLists.map((list) => (
                 <option value={list.firebaseKey} key={list.firebaseKey}>

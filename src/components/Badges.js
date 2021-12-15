@@ -14,7 +14,7 @@ export default function Badges({ badge, admin, setBadges }) {
   return (
     <div className="card" style={{ width: 200 }}>
       <img src={badge.imgUrl} alt="badge" width="30px" />
-      <h4>{badge.name}</h4>
+      <h4>{badge.badge_name}</h4>
       {admin ? (
         <button
           onClick={() => handleClick('delete')}
