@@ -17,12 +17,12 @@ export default function AdminView({ admin }) {
   }, []);
 
   return (
-    <div>
-      <h1>this is home, {admin.fullName}</h1>
+    <div className="text-center">
+      <h1>Welcome, {admin.fullName}</h1>
       <div>
         <ListForm setLists={setLists} />
       </div>
-      <div className="list-space d-flex flex-wrap">
+      <div className="list-space d-flex flex-wrap justify-content-center">
         {lists.map((list) => (
           <ListCard key={list.firebaseKey} list={list} admin={admin} />
         ))}
@@ -30,7 +30,7 @@ export default function AdminView({ admin }) {
       <div>
         <BadgeForm setBadges={setBadges} />
       </div>
-      <div className="badge-space d-flex flex-wrap">
+      <div className="badge-space d-flex flex-wrap justify-content-center">
         {badges.map((badge) => (
           <Badges key={badge.firebaseKey} badge={badge} admin={admin} />
         ))}

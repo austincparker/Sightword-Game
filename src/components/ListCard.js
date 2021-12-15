@@ -15,7 +15,7 @@ export default function ListCard({ list, setLists, admin }) {
   };
 
   return (
-    <div className="m-4">
+    <div className="m-2 list-card p-4">
       <img src={list.badgeUrl} alt="badge" width="50px" />
       <h5>{list.name}</h5>
       <p>{list.grade}</p>

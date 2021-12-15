@@ -1,8 +1,31 @@
 @import '~@fortawesome/fontawesome-free/css/all.min.css';
 @import 'globals';
 
+.App {
+  background-color: $favColor;
+  border-radius: 0 0 1rem 1rem;
+}
+
 body {
-  background-color: $favColor !important;
+  background-color: $primaryColor !important;
+}
+
+input {
+  display: block;
+}
+
+.list-card {
+  background-color: white;
+  border-radius: 1rem;
+  border: 1px solid dimgray;
+  width: 200px;
+}
+
+.badge-card {
+  background-color: white;
+  border-radius: 0 2rem 0 2rem;
+  border: 2px solid dimgray;
+
 }
 
 .play-card {

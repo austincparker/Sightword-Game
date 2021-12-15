@@ -38,12 +38,12 @@ export default function Play() {
       setWord(playWords[current]);
     } else if (score === 5 && current === 6) {
       setScore(6);
-      setResults('you did it!');
+      setResults('You did it!');
     } else if (score === 6) {
-      setResults('you got them all! try another list');
+      setResults('You got them all! Try another list!');
     } else {
       console.warn(`you missed ${current - score - 1}`);
-      setResults(`you missed ${current - score - 1}`);
+      setResults(`You missed ${current - score - 1}.`);
     }
   };
 
@@ -53,23 +53,31 @@ export default function Play() {
       setWord(playWords[current]);
     } else {
       setCurrent(6);
-      setResults(`you missed ${current - score}`);
+      setResults(`You missed ${current - score}.`);
     }
   };
 
-  // console.warn(playWords[1]);
-
   return (
     <div className="text-center">
-      <h1>this is list {playList.name}</h1>
-      <h2 className="text-muted">word {current}</h2>
+      <h1>{playList.name}</h1>
+      <h2 className="text-muted">Word {current}</h2>
       <SingleWord word={word} />
-      <button type="button" onClick={handleWrong}>
-        wrong
-      </button>
-      <button type="button" onClick={handleCorrect}>
-        right {score}
-      </button>
+      <div className="btn-group">
+        <button
+          type="button"
+          onClick={handleWrong}
+          className="btn btn-outline-danger"
+        >
+          Wrong
+        </button>
+        <button
+          type="button"
+          onClick={handleCorrect}
+          className="btn btn-outline-primary"
+        >
+          Right
+        </button>
+      </div>
       <h3>{results}</h3>
     </div>
   );
