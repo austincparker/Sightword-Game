@@ -24,14 +24,14 @@ export default function Home({ user }) {
 
   return (
     <div>
-      <h1 className="text-center">Welcome, {user.fullName}</h1>
-      <h5 className="text-center">My Badges</h5>
+      <h1 className="text-center display-4">Welcome, {user.fullName}</h1>
+      <h5 className="text-center display-6">My Badges</h5>
       <div className="badge-space d-flex flex-wrap justify-content-center m-2">
         {badges.map((badge) => (
           <Badges key={badge.firebaseKey} badge={badge} setBadges={setBadges} />
         ))}
       </div>
-      <h5 className="text-center">Pick a list to play!</h5>
+      <h5 className="text-center display-6">Pick a list to play!</h5>
       <div className="list-space d-flex flex-wrap justify-content-center">
         {lists.map((list) => (
           <ListCard key={list.firebaseKey} list={list} setLists={setLists} />

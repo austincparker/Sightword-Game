@@ -16,15 +16,15 @@ export default function ListCard({ list, setLists, admin }) {
 
   return (
     <div className="m-2 list-card p-4">
-      <img src={list.badgeUrl} alt="badge" width="50px" />
-      <h5>{list.name}</h5>
-      <p>{list.grade}</p>
-      <p>{list.word_1}</p>
-      <p>{list.word_2}</p>
-      <p>{list.word_3}</p>
-      <p>{list.word_4}</p>
-      <p>{list.word_5}</p>
-      <p>{list.word_6}</p>
+      <img src={list.badgeUrl} alt="badge" width="50px" className="list-img" />
+      <h5 className="list-title">{list.name}</h5>
+      <h6 className="list-grade mb-3">{list.grade}</h6>
+      <p className="word">{list.word_1}</p>
+      <p className="word">{list.word_2}</p>
+      <p className="word">{list.word_3}</p>
+      <p className="word">{list.word_4}</p>
+      <p className="word">{list.word_5}</p>
+      <p className="word">{list.word_6}</p>
       {admin ? (
         <div>
           <button
