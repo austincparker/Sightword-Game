@@ -13,7 +13,7 @@ const initialState = {
   word_4: '',
   word_5: '',
   word_6: '',
-  badge_url: '',
+  badgeUrl: '',
 };
 
 export default function ListForm({ editItem, setLists }) {
@@ -45,15 +45,14 @@ export default function ListForm({ editItem, setLists }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (editItem.firebaseKey) {
-      updateList(editItem.firebaseKey, formInput).then(() => {
-        history.push('/');
-      });
+      updateList(editItem.firebaseKey, formInput).then(history.push('/'));
       //   updateProject(obj.firebaseKey, formInput).then(() => {
       resetForm();
       //     history.push('/projects');
       // })
     } else {
-      createList({ ...formInput }).then(() => setLists);
+      createList({ ...formInput }).then(setLists);
+      history.push('/');
       resetForm();
     }
   };
@@ -198,7 +197,6 @@ export default function ListForm({ editItem, setLists }) {
                 style={{
                   width: '30rem',
                 }}
-                type="url"
                 id="badgeUrl"
                 name="badgeUrl"
                 value={formInput.badgeUrl}

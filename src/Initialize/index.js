@@ -28,7 +28,6 @@ function Initialize() {
             createUser(userInfoObj).then(() => setUser(userInfoObj));
           }
         });
-        console.warn('STRETCH BRANCH');
       } else if (user || user === null) {
         setUser(false);
         setAdmin(null);
