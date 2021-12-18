@@ -24,7 +24,12 @@ export default function AdminView({ admin }) {
       </div>
       <div className="list-space d-flex flex-wrap justify-content-center">
         {lists.map((list) => (
-          <ListCard key={list.firebaseKey} list={list} admin={admin} />
+          <ListCard
+            key={list.firebaseKey}
+            list={list}
+            admin={admin}
+            setLists={setLists}
+          />
         ))}
       </div>
       <div>

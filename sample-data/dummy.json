@@ -1,15 +1,5 @@
 {
     "users": {
-        "1234asdf" : {
-            "firebaseKey": "1234asdf",
-            "full_name": "Dennis Joins",
-            "admin": false
-        },
-        "5678asdf" : {
-            "firebaseKey": "5678asdf",
-            "full_name": "Ralph Tato",
-            "admin": false
-        },
         "-MqLcj7K0jvqux8ZmVi2": {
             "admin": false,
             "firebaseKey": "-MqLcj7K0jvqux8ZmVi2",
@@ -24,65 +14,71 @@
         }
     },
     "lists": {
-        "9876fdsa" : {
-            "badgeUrl": "https://www.pikpng.com/pngl/m/204-2041643_boss-logo-icon-02-react-logo-small-clipart.png",
-            "firebaseKey": "9876fdsa",
-            "name": "Basic Animals",
+        "-MrDuGhNXa-i_J68PSYf" : {
+            "badgeUrl": "https://st4.depositphotos.com/5934840/28731/v/950/depositphotos_287316340-stock-illustration-happy-boy-cartoon.jpg",
+            "firebaseKey": "-MrDuGhNXa-i_J68PSYf",
+            "name": "Starter List",
             "grade": "Kindergarten",
-            "word_1": "dog",
-            "word_2": "cow",
-            "word_3": "bird",
-            "word_4": "cat",
-            "word_5": "fish",
-            "word_6": "frog"
+            "word_1": "I",
+            "word_2": "can",
+            "word_3": "the",
+            "word_4": "we",
+            "word_5": "see",
+            "word_6": "a"
         },
-        "5432fdsa" : {
-            "badgeUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
-            "badge_id": "2222bbbb",
-            "firebaseKey": "5432fdsa",
-            "name": "More Animals",
+        "-MrDyEvB8gLUI2Nxc1qH" : {
+            "badgeUrl": "https://media.wired.com/photos/59094a0ad8c8646f38eef2ae/master/w_1600,c_limit/rainbow-sq.jpg",
+            "firebaseKey": "-MrDyEvB8gLUI2Nxc1qH",
+            "name": "Colors",
             "grade": "First Grade",
-            "word_1": "horse",
-            "word_2": "tiger",
-            "word_3": "eagle",
-            "word_4": "snake",
-            "word_5": "blowfish",
-            "word_6": "bison"
-        }
-    },
+            "word_1": "red",
+            "word_2": "orange",
+            "word_3": "yellow",
+            "word_4": "green",
+            "word_5": "blue",
+            "word_6": "purple"
+        },
+    "-MrE-c8Kk_fgD1gbWt59" : {
+        "badgeUrl": "https://clipart.info/images/ccovers/1495751364House-PNG-Clip-Art2210.png",
+        "firebaseKey": "-MrE-c8Kk_fgD1gbWt59",
+        "name": "Hometown",
+        "grade": "Second Grade",
+        "word_1": "city",
+        "word_2": "house",
+        "word_3": "people",
+        "word_4": "school",
+        "word_5": "children",
+        "word_6": "friends"
+    }
+},
     "badges": {
-        "1111aaaa": {
-            "firebaseKey": "1111aaaa",
-            "badge_name": "Even Harder Animals Badge",
+        "MrDuoTFr0LhLuynYfY2": {
+            "firebaseKey": "MrDuoTFr0LhLuynYfY2",
+            "badge_name": "Starter Badge",
             "level": 1,
-            "imgUrl": "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png",
-            "list_id": "9876fdsa"
+            "imgUrl": "https://st4.depositphotos.com/5934840/28731/v/950/depositphotos_287316340-stock-illustration-happy-boy-cartoon.jpg",
+            "list_id": "-MrDuGhNXa-i_J68PSYf"
         },
-        "2222bbbb": {
-            "firebaseKey": "2222bbbb",
-            "badge_name": "More Animals Badge",
+        "-MrDyNK5d9xF2uZ79GwT": {
+            "firebaseKey": "-MrDyNK5d9xF2uZ79GwT",
+            "badge_name": "Colors Badge",
             "level": 2,
-            "imgUrl": "https://pbs.twimg.com/profile_images/1410632439370641409/Pt-7RucE_400x400.jpg",
-            "list_id": "5432fdsa"
+            "imgUrl": "https://media.wired.com/photos/59094a0ad8c8646f38eef2ae/master/w_1600,c_limit/rainbow-sq.jpg",
+            "list_id": "-MrDyEvB8gLUI2Nxc1qH"
         },
-        "3333cccc": {
-            "firebaseKey": "3333cccc",
-            "badge_name": "Basic Animals Badge",
-            "level": 1,
-            "imgUrl": "https://miro.medium.com/max/600/1*R4c8lHBHuH5qyqOtZb3h-w.png",
-            "list_id": ""
+        "-MrE-iWgQOPseOFOK-oi": {
+            "firebaseKey": "-MrE-iWgQOPseOFOK-oi",
+            "badge_name": "Hometown Badge",
+            "level": 3,
+            "imgUrl": "https://clipart.info/images/ccovers/1495751364House-PNG-Clip-Art2210.png",
+            "list_id": "-MrE-c8Kk_fgD1gbWt59"
         }
     },
     "user_badges": {
-        "0912aust": {
-            "firebaseKey": "0912aust",
+        "-MrDxB8R67o8hQ77hOAW": {
+            "firebaseKey": "-MrDxB8R67o8hQ77hOAW",
             "user_id": "rU0HxjNoyAhXHqoFHxEPN64ZTYx2",
-            "badge_id": "1111aaaa"
-        },
-        "0234ralp": {
-            "firebaseKey": "0234ralp",
-            "user_id": "rU0HxjNoyAhXHqoFHxEPN64ZTYx2",
-            "badge_id": "3333cccc"
+            "badge_id": "-MrDuoTFr0LhLuynYfY2"
         }
     }
 }
