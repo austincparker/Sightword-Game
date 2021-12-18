@@ -44,7 +44,7 @@ export default function BadgeForm({ editItem, setBadges }) {
       console.warn(editItem);
     } else {
       console.warn(formInput);
-      createBadge({ ...formInput }).then(() => setBadges);
+      createBadge({ ...formInput }).then(setBadges);
       resetForm();
     }
   };

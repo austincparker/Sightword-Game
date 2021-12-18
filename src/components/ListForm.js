@@ -13,7 +13,7 @@ const initialState = {
   word_4: '',
   word_5: '',
   word_6: '',
-  badge_url: '',
+  badgeUrl: '',
 };
 
 export default function ListForm({ editItem, setLists }) {
@@ -45,15 +45,14 @@ export default function ListForm({ editItem, setLists }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (editItem.firebaseKey) {
-      updateList(editItem.firebaseKey, formInput).then(() => {
-        history.push('/');
-      });
+      updateList(editItem.firebaseKey, formInput).then(history.push('/'));
       //   updateProject(obj.firebaseKey, formInput).then(() => {
       resetForm();
       //     history.push('/projects');
       // })
     } else {
-      createList({ ...formInput }).then(() => setLists);
+      createList({ ...formInput }).then(setLists);
+      history.push('/');
       resetForm();
     }
   };
@@ -67,15 +66,12 @@ export default function ListForm({ editItem, setLists }) {
             <label htmlFor="name" className="form-label">
               List Name
               <input
-                style={{
-                  width: '30rem',
-                }}
                 id="name"
                 name="name"
                 value={formInput.name}
                 onChange={handleChange}
                 required
-                className="form-control"
+                className="form-control list-inputs"
               />
             </label>
           </div>
@@ -83,15 +79,12 @@ export default function ListForm({ editItem, setLists }) {
             <label htmlFor="grade" className="form-label">
               List Grade
               <input
-                style={{
-                  width: '30rem',
-                }}
                 id="grade"
                 name="grade"
                 value={formInput.grade}
                 onChange={handleChange}
                 required
-                className="form-control"
+                className="form-control list-inputs"
               />
             </label>
           </div>
@@ -99,15 +92,12 @@ export default function ListForm({ editItem, setLists }) {
             <label htmlFor="word_1" className="form-label">
               Word 1
               <input
-                style={{
-                  width: '30rem',
-                }}
                 id="word_1"
                 name="word_1"
                 value={formInput.word_1}
                 onChange={handleChange}
                 required
-                className="form-control"
+                className="form-control list-inputs"
               />
             </label>
           </div>
@@ -115,15 +105,12 @@ export default function ListForm({ editItem, setLists }) {
             <label htmlFor="word_2" className="form-label">
               Word 2
               <input
-                style={{
-                  width: '30rem',
-                }}
                 id="word_2"
                 name="word_2"
                 value={formInput.word_2}
                 onChange={handleChange}
                 required
-                className="form-control"
+                className="form-control list-inputs"
               />
             </label>
           </div>
@@ -131,15 +118,12 @@ export default function ListForm({ editItem, setLists }) {
             <label htmlFor="word_3" className="form-label">
               Word 3
               <input
-                style={{
-                  width: '30rem',
-                }}
                 id="word_3"
                 name="word_3"
                 value={formInput.word_3}
                 onChange={handleChange}
                 required
-                className="form-control"
+                className="form-control list-inputs"
               />
             </label>
           </div>
@@ -147,15 +131,12 @@ export default function ListForm({ editItem, setLists }) {
             <label htmlFor="word_4" className="form-label">
               Word 4
               <input
-                style={{
-                  width: '30rem',
-                }}
                 id="word_4"
                 name="word_4"
                 value={formInput.word_4}
                 onChange={handleChange}
                 required
-                className="form-control"
+                className="form-control list-inputs"
               />
             </label>
           </div>
@@ -163,15 +144,12 @@ export default function ListForm({ editItem, setLists }) {
             <label htmlFor="word_5" className="form-label">
               Word 5
               <input
-                style={{
-                  width: '30rem',
-                }}
                 id="word_5"
                 name="word_5"
                 value={formInput.word_5}
                 onChange={handleChange}
                 required
-                className="form-control"
+                className="form-control list-inputs"
               />
             </label>
           </div>
@@ -179,15 +157,12 @@ export default function ListForm({ editItem, setLists }) {
             <label htmlFor="word_6" className="form-label">
               Word 6
               <input
-                style={{
-                  width: '30rem',
-                }}
                 id="word_6"
                 name="word_6"
                 value={formInput.word_6}
                 onChange={handleChange}
                 required
-                className="form-control"
+                className="form-control list-inputs"
               />
             </label>
           </div>
@@ -195,15 +170,11 @@ export default function ListForm({ editItem, setLists }) {
             <label htmlFor="badgeUrl" className="form-label">
               Badge Image Url
               <input
-                style={{
-                  width: '30rem',
-                }}
-                type="url"
                 id="badgeUrl"
                 name="badgeUrl"
                 value={formInput.badgeUrl}
                 onChange={handleChange}
-                className="form-control"
+                className="form-control list-inputs"
               />
             </label>
           </div>
