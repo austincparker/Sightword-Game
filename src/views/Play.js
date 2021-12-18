@@ -45,7 +45,6 @@ export default function Play({ user }) {
         user_id: user.uid,
         badge_id: badgeObj.firebaseKey,
       }));
-      console.warn(user.fullName);
     } else if (score === 6) {
       setResults('You got them all! Try another list!');
     } else {
