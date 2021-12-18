@@ -15,6 +15,12 @@
             "firebaseKey": "-MqLcj7K0jvqux8ZmVi2",
             "fullName": "Katie Parker",
             "uid": "rU0HxjNoyAhXHqoFHxEPN64ZTYx2"
+        },
+        "-MrDLDg48bRviSVMiaDU": {
+            "admin": true,
+            "firebaseKey": "-MrDLDg48bRviSVMiaDU",
+            "fullName": "Austin Parker",
+            "uid": "kZiHP0iiOwMyUKTISPBkqELGXzE2"
         }
     },
     "lists": {
@@ -70,12 +76,12 @@
     "user_badges": {
         "0912aust": {
             "firebaseKey": "0912aust",
-            "user_id": "1234asdf",
+            "user_id": "rU0HxjNoyAhXHqoFHxEPN64ZTYx2",
             "badge_id": "1111aaaa"
         },
         "0234ralp": {
             "firebaseKey": "0234ralp",
-            "user_id": "5678asdf",
+            "user_id": "rU0HxjNoyAhXHqoFHxEPN64ZTYx2",
             "badge_id": "3333cccc"
         }
     }
