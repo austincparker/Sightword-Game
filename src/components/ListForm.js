@@ -52,7 +52,7 @@ export default function ListForm({ editItem, setLists }) {
       // })
     } else {
       createList({ ...formInput }).then(setLists);
-      history.push('/');
+      // history.push('/');
       resetForm();
     }
   };
