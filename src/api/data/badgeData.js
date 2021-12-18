@@ -56,6 +56,29 @@ const deleteBadge = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const getBadgeByListId = (listId) => new Promise((resolve, reject) => {
+  axios
+    .get(`${baseURL}/badges.json?orderBy="list_id"&equalTo="${listId}"`)
+    .then((response) => {
+      resolve(Object.values(response.data)[0]);
+    })
+    .catch(reject);
+});
+
+const createUserBadge = (obj) => new Promise((resolve, reject) => {
+  axios
+    .post(`${baseURL}/user_badges.json`, obj)
+    .then((response) => {
+      const firebaseKey = response.data.name;
+      axios
+        .patch(`${baseURL}/user_badges/${firebaseKey}.json`, {
+          firebaseKey,
+        })
+        .then(resolve);
+    })
+    .catch(reject);
+});
+
 export {
   getBadges,
   createBadge,
@@ -63,4 +86,6 @@ export {
   getBadgeByBadgeId,
   getBadgesByUid,
   deleteBadge,
+  getBadgeByListId,
+  createUserBadge,
 };

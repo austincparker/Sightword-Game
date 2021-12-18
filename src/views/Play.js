@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import { useParams } from 'react-router-dom';
 import { getSingleList } from '../api/data/listData';
 import SingleWord from '../components/SingleWord';
+import { createUserBadge, getBadgeByListId } from '../api/data/badgeData';
 
-export default function Play() {
+export default function Play({ user }) {
   const [playList, setPlayList] = useState({});
   const [score, setScore] = useState(0);
   const [current, setCurrent] = useState(1);
@@ -39,6 +41,11 @@ export default function Play() {
     } else if (score === 5 && current === 6) {
       setScore(6);
       setResults('You did it!');
+      getBadgeByListId(playList.firebaseKey).then((badgeObj) => createUserBadge({
+        user_id: user.uid,
+        badge_id: badgeObj.firebaseKey,
+      }));
+      console.warn(user.fullName);
     } else if (score === 6) {
       setResults('You got them all! Try another list!');
     } else {
@@ -82,3 +89,10 @@ export default function Play() {
     </div>
   );
 }
+
+Play.defaultProps = {
+  user: null,
+};
+Play.propTypes = {
+  user: PropTypes.shape(PropTypes.obj),
+};
