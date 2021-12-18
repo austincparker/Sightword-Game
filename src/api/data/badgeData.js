@@ -25,15 +25,10 @@ const getUserBadgesByUid = (uid) => new Promise((resolve, reject) => {
 });
 
 const getBadgesByUid = (uid) => new Promise((resolve, reject) => {
-  const badgeArray = [];
   getUserBadgesByUid(uid)
     .then((userBadgeArray) => {
-      userBadgeArray.map((userBadgeObj) => getBadgeByBadgeId(userBadgeObj.badge_id).then((badgeObj) => {
-        badgeArray.push(badgeObj);
-      }));
-    })
-    .then(() => {
-      resolve(badgeArray);
+      const badgeArray = userBadgeArray.map((userBadgeObj) => getBadgeByBadgeId(userBadgeObj.badge_id).then((badgeObj) => badgeObj));
+      Promise.all(badgeArray).then(resolve);
     })
     .catch(reject);
 });

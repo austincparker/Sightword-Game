@@ -32,7 +32,12 @@ export default function AdminView({ admin }) {
       </div>
       <div className="badge-space d-flex flex-wrap justify-content-center">
         {badges.map((badge) => (
-          <Badges key={badge.firebaseKey} badge={badge} admin={admin} />
+          <Badges
+            key={badge.firebaseKey}
+            badge={badge}
+            admin={admin}
+            setBadges={setBadges}
+          />
         ))}
       </div>
     </div>

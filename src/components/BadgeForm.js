@@ -58,15 +58,12 @@ export default function BadgeForm({ editItem, setBadges }) {
             <label htmlFor="bname" className="form-label">
               Badge Name
               <input
-                style={{
-                  width: '30rem',
-                }}
                 id="badge_name"
                 name="badge_name"
                 value={formInput.badge_name}
                 onChange={handleChange}
                 required
-                className="form-control"
+                className="form-control badge-input"
               />
             </label>
           </div>
@@ -74,15 +71,12 @@ export default function BadgeForm({ editItem, setBadges }) {
             <label htmlFor="level" className="form-label">
               Badge Level
               <input
-                style={{
-                  width: '30rem',
-                }}
                 id="level"
                 name="level"
                 value={formInput.level}
                 onChange={handleChange}
                 required
-                className="form-control"
+                className="form-control badge-input"
               />
             </label>
           </div>
@@ -90,15 +84,12 @@ export default function BadgeForm({ editItem, setBadges }) {
             <label htmlFor="imgUrl">
               Badge Image Url
               <input
-                style={{
-                  width: '30rem',
-                }}
                 type="url"
                 id="imgUrl"
                 name="imgUrl"
                 value={formInput.imgUrl}
                 onChange={handleChange}
-                className="form-control"
+                className="form-control badge-input"
               />
             </label>
           </div>
@@ -106,12 +97,10 @@ export default function BadgeForm({ editItem, setBadges }) {
             <label>
               For Which List?
               <select
-                // value={formInput.list_id}
-                // onChange={handleChange}
-                style={{
-                  width: '30rem',
-                }}
-                className="form-select m-auto"
+                name="list_id"
+                value={formInput.list_id}
+                onChange={handleChange}
+                className="form-select m-auto badge-input"
                 aria-label="Default select example"
                 required
               >
