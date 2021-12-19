@@ -18,7 +18,7 @@ export default function AdminView({ admin }) {
 
   return (
     <div className="text-center">
-      <h1>Welcome, {admin.fullName}</h1>
+      <h1 className="mb-3">Welcome, {admin.fullName}</h1>
       <div>
         <ListForm setLists={setLists} />
       </div>

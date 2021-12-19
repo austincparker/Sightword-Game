@@ -53,7 +53,7 @@ export default function BadgeForm({ editItem, setBadges }) {
     <div>
       <h3>Make a New Badge</h3>
       <div>
-        <form onSubmit={handleSubmit} className="ms-2">
+        <form onSubmit={handleSubmit} className="ms-2 mb-4 badge-form">
           <div>
             <label htmlFor="bname" className="form-label">
               Badge Name

@@ -20,7 +20,7 @@ input {
 .list-card {
   background-color: white;
   border-radius: .8rem;
-  border: 2px solid;
+  border: 1px solid;
   border-image-slice: 1;
   border-image-source: radial-gradient($primaryColor, $favColor);
   width: 200px;
@@ -65,4 +65,13 @@ input {
 .badge-title {
   font-family: Roboto Slab;
   font-weight: 700;
+}
+
+@media (max-width: 400px) {
+  .list-inputs {
+    width: 100%;
+  }
+  .badge-input {
+    width: 100%;
+  }
 }

@@ -59,9 +59,9 @@ export default function ListForm({ editItem, setLists }) {
 
   return (
     <div>
-      <h1>Make a New List</h1>
+      <h3 className="mb-2">Make a New List</h3>
       <div>
-        <form onSubmit={handleSubmit} className="ms-2">
+        <form onSubmit={handleSubmit} className="ms-2 mb-4 list-form">
           <div>
             <label htmlFor="name" className="form-label">
               List Name
