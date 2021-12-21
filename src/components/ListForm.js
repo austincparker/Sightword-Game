@@ -59,9 +59,9 @@ export default function ListForm({ editItem, setLists }) {
 
   return (
     <div>
-      <h1>Make a New List</h1>
+      <h3 className="my-4">Make a New List</h3>
       <div>
-        <form onSubmit={handleSubmit} className="ms-2">
+        <form onSubmit={handleSubmit} className="ms-2 mb-4 list-form">
           <div>
             <label htmlFor="name" className="form-label">
               List Name
@@ -178,7 +178,7 @@ export default function ListForm({ editItem, setLists }) {
               />
             </label>
           </div>
-          <button className="btn btn-success" type="submit">
+          <button className="btn btn-success mt-1" type="submit">
             {editItem.firebaseKey ? 'Update' : 'Create'}
           </button>
         </form>

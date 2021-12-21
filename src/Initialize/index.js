@@ -49,7 +49,17 @@ function Initialize() {
           </button>
         </>
       ) : (
-        <SignIn user={user} />
+        <div>
+          <div className="text-center">
+            <img
+              src="../../../imgs/sightwordgamelogo.png"
+              width="300px"
+              className="m-auto"
+              alt="sightwordgame"
+            />
+          </div>
+          <SignIn user={user} />
+        </div>
       )}
     </div>
   );
