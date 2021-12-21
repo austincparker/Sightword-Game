@@ -3,7 +3,7 @@ import { signInUser } from '../api/auth';
 
 export default function SignIn() {
   return (
-    <div className="text-center mt-5">
+    <div className="text-center m-3">
       <h1>Welcome! Sign In!</h1>
       <button
         type="button"

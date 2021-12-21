@@ -50,7 +50,7 @@ export default function BadgeForm({ editItem, setBadges }) {
   };
 
   return (
-    <div>
+    <div className="my-4">
       <h3>Make a New Badge</h3>
       <div>
         <form onSubmit={handleSubmit} className="ms-2 mb-4 badge-form">
@@ -114,7 +114,7 @@ export default function BadgeForm({ editItem, setBadges }) {
               </select>
             </label>
           </div>
-          <button className="btn btn-success" type="submit">
+          <button className="btn btn-success mt-1" type="submit">
             {editItem.firebaseKey ? 'Update' : 'Create'}
           </button>
         </form>
