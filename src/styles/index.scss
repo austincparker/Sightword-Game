@@ -69,11 +69,11 @@ input {
   font-weight: 700;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   .list-inputs {
-    width: 100%;
+    width: 20rem;
   }
   .badge-input {
-    width: 100%;
+    width: 20rem;
   }
 }
