@@ -26,6 +26,8 @@ The non-admin user logs in and is brought to their dashboard. From here, the use
 
 The admin logs in and is brought to the 'admin view' where they can create, delete, or update lists and/or badges.
 
-![ss-admin](https://user-images.githubusercontent.com/70224936/146987602-a546adf8-ec03-423e-9d3f-31922a9590a5.png)
+![ss-list-form](https://user-images.githubusercontent.com/70224936/146990284-8aac097f-471e-4eb9-800e-702cbdd7e8c2.png)
+
+![ss-badge-form](https://user-images.githubusercontent.com/70224936/146990321-b081c948-cf8d-4a4f-aeb6-b68bbc02d0a8.png)
 
 #### Contributor: Austin Parker (https://github.com/austincparker)
